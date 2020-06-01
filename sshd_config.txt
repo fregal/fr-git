@@ -41,7 +41,6 @@ LogLevel INFO
 #LoginGraceTime 2m
 PermitRootLogin no
 #StrictModes yes
-#MaxAuthTries 6
 MaxAuthTries 4
 #MaxSessions 10
 
@@ -106,7 +105,7 @@ AcceptEnv XMODIFIERS
 #AllowAgentForwarding yes
 #AllowTcpForwarding yes
 #GatewayPorts no
-X11Forwarding no
+#X11Forwarding no
 #X11Forwarding yes
 #X11DisplayOffset 10
 #X11UseLocalhost yes
@@ -117,8 +116,6 @@ X11Forwarding no
 #UsePrivilegeSeparation yes
 PermitUserEnvironment no
 #Compression delayed
-ClientAliveInterval 300
-ClientAliveCountMax 0
 #ShowPatchLevel no
 #UseDNS yes
 #PidFile /var/run/sshd.pid
@@ -141,12 +138,9 @@ KerberosAuthentication no
 PubkeyAuthentication yes
 GSSAPIAuthentication yes
 AuthorizedKeysCommand /usr/bin/sss_ssh_authorizedkeys
-Ciphers aes128-ctr,aes192-ctr,aes256-ctr
 ########################added
 # Add to /etc/ssh/sshd_config
 X11Forwarding no
 ClientAliveInterval 300
 ClientAliveCountMax 0
-MaxAuthTries 4
 Ciphers aes128-ctr,aes192-ctr,aes256-ctr 
-MaxAuthTries 4
